@@ -1,0 +1,145 @@
+.b-dashboard
+{
+    color: $TEXT_DARK_COLOR;
+}
+
+.b-dashboard__header
+{
+    margin-left: calc(#{$DASHBOARD_CONTENT_LEFT_OFFSET});
+    margin-bottom: 40px;
+}
+
+.b-dashboard-header
+{
+    font-size: 30px;
+
+    text-align: center;
+    text-transform: uppercase;
+    @include bold-font;
+}
+
+
+.b-dashboard__loader
+{
+    pointer-events: none;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // (100vw - 100%) * 0.5 - is scroll fix
+    margin-left: calc(((100vw - 100%) * 0.5) + (((#{$DASHBOARD_CONTENT_LEFT_OFFSET}))  * 0.5));
+}
+
+.b-dashboard-loader-wrapper
+{
+    &.b-dashboard-loader-wrapper--fade-out
+    {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 0.3s, opacity 0.3s linear;
+    }
+}
+
+.b-dashboard-loader
+{
+    color: $THEME_COLOR_DARK;
+    text-shadow: 0 0 5px $LIGHTEST_COLOR;
+}
+
+.b-dashboard__content-with-sidebar
+{
+    margin-top: 20px;
+}
+
+.b-dashboard-content-with-sidebar
+{
+    display: flex;
+
+    justify-content: flex-start;
+}
+
+.b-dashboard__sidebar
+{
+    flex-shrink: 0;
+    margin-right: $SIDEBAR_MARGIN_RIGHT;
+}
+
+.b-dashboard__content
+{
+    margin-left: $DASHBOARD_CONTENT_LEFT_MARGIN;
+    width: 100%;
+    flex-shrink: 1;
+    overflow: hidden;
+}
+
+.b-dashboard-content
+{
+    color: $TEXT_DARK_COLOR;
+}
+
+.b-dashboard-input-with-action__input
+{
+    margin-bottom: 5px;
+}
+
+.b-dashboard-input-with-action__link
+{
+    margin-left: 5px;
+}
+
+.b-dashboard-link
+{
+    @include link-on-light;
+    display: inline-flex;
+}
+
+.b-dashboard-link__icon
+{
+    margin-right: 4px;
+}
+
+.b-dashboard-content-login-hidden
+{
+    display: none;
+}
+
+.b-dashboard-content-login-invitation
+{
+    display: inline;
+}
+
+.b-dashboard-content-login-link
+{
+    display: inline;
+    @include link-on-light;
+}
+
+.b-dashboard-content__part
+{
+    &.b-dashboard-content__part--margin-top
+    {
+        margin-top: 30px
+    }
+}
+
+.b-dashboard-content-part-header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include increased-font;
+}
+
+.b-dashboard-content-part__body
+{
+    margin-top: 20px;
+}
+
+.b-dashboard-content-login
+{
+    color: $TEXT_DARK_COLOR;
+    text-align: center;
+}

@@ -1,0 +1,47 @@
+.b-page-container__header
+{
+}
+
+.b-page-container__content
+{
+    display: flex;
+    flex-direction: column;
+
+    @include content-padding;
+    margin-bottom: $FOOTER_HEIGHT;
+
+    background-color: $LIGHTEST_COLOR;
+
+    min-height: calc(100vh - #{$HEADER_HEIGHT} - 2 * #{$HEADER_VERTICAL_MARGIN} - 2 * #{$CONTENT_VERTICAL_PADDING} - #{$FOOTER_HEIGHT});
+
+    &.b-page-container__content--no-header
+    {
+        min-height: calc(100vh - 2 * #{$CONTENT_VERTICAL_PADDING} - #{$FOOTER_HEIGHT});
+    }
+
+    &.b-page-container__content-no-padding
+    {
+        padding: 0;
+        min-height: calc(100vh - #{$FOOTER_HEIGHT});
+    }
+}
+
+.b-page-container__footer
+{
+    position: fixed;
+    height: $FOOTER_HEIGHT;
+
+    margin-left: -$CONTENT_PADDING;
+    width: 100vw;
+    bottom: 0;
+}
+
+.b-page-container__remark
+{
+    position: fixed;
+    width: 450px;
+    top: 12px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-left: calc((100vw - 100%) * 0.5)
+}

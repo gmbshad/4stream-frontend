@@ -1,0 +1,135 @@
+.b-file-upload
+{
+  display: flex;
+}
+
+.b-file-upload__current
+{
+  margin-right: 10px;
+}
+
+.b-file-upload-part__controls
+{
+}
+
+.b-file-upload-controls
+{
+  display: flex;
+  justify-content: center;
+}
+
+.b-file-upload-controls__item
+{
+  @include flex-center-content;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+
+  &.b-file-upload-controls__item--hidden
+  {
+    visibility: hidden;
+  }
+}
+
+.b-file-upload-control
+{
+  cursor: pointer;
+
+  &.b-file-upload-control--red
+  {
+    color: darkred;
+  }
+
+  &.b-file-upload-control--green
+  {
+    color: $GREEN_COLOR;
+  }
+
+  &:hover
+  {
+    transform: scale(1.20);
+  }
+}
+
+.b-file-upload-part__label
+{
+  margin-bottom: 5px;
+}
+
+.b-file-upload-input-with-label
+{
+  vertical-align: top;
+  display: inline-block;
+}
+
+.b-file-upload-input-with-label__label
+{
+  margin-bottom: 5px;
+}
+
+.b-file-upload-part-label
+{
+  text-align: center;
+}
+
+.b-file-upload-internal-input
+{
+  display: none;
+}
+
+.b-file-upload-part__error
+{
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.b-file-upload-part-error
+{
+  color: $VALIDATION_COLOR;
+  @include smallest-font;
+}
+
+.b-file-upload-part__preview
+{
+
+}
+
+.b-file-upload-part-preview
+{
+  border: 1px solid $LIGHT_COLOR;
+  background-color: $LIGHTEST_COLOR;
+  width: 64px;
+  height: 64px;
+  margin: auto;
+}
+
+.b-file-upload-part-preview__bounding-box
+{
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+
+  @include flex-center-content;
+}
+
+.b-file-upload-part__image-preview-with-controls
+{
+  margin-top: 10px;
+}
+
+.b-file-upload-image-preview-with-controls
+{
+  @include flex-center-content;
+}
+
+.b-file-upload-part-input
+{
+  &.b-file-upload-part-input--active
+  {
+    border: 1px solid $THEME_COLOR;
+    border-radius: 5px;
+  }
+}

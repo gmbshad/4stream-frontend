@@ -1,0 +1,82 @@
+$SELECT_INPUT_WIDTH_MIN: 160px;
+$SELECT_ARROW_WIDTH: 1em;
+
+.b-select
+{
+    display: flex;
+    align-items: stretch;
+
+    @include decreased-font;
+
+    &.b-select--small
+    {
+        @include smaller-font;
+    }
+}
+
+.b-select__input
+{
+    margin-right: calc(-#{$SELECT_ARROW_WIDTH} - #{$INPUT_BORDER_WIDTH});
+}
+
+.b-select-input
+{
+    @include base-input(auto);
+
+    // <iOsSafariHack>
+    appearance:none;
+    margin-top: 0;
+    margin-bottom: 0;
+    // </iOSSafariHack>
+
+    // <IEHack>
+    &.b-select-input::-ms-expand {
+        display: none;
+    }
+    // </IEHack>
+
+    min-width: $SELECT_INPUT_WIDTH_MIN;
+    width: 100%;
+
+    padding-left: 5px;
+    padding-right: $SELECT_ARROW_WIDTH;
+
+    &.b-select-input--small
+    {
+        @include smaller-font;
+    }
+}
+
+.b-select__arrow
+{
+    width: $SELECT_ARROW_WIDTH;
+    margin-top: $INPUT_BORDER_WIDTH;
+    margin-bottom: $INPUT_BORDER_WIDTH;
+    pointer-events: none;
+
+    background-color: $INPUT_BACKGROUND_COLOR;
+
+    border-radius: 5px;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.b-select-arrow
+{
+    pointer-events: none;
+    color: $TEXT_DARK_COLOR;
+}
+
+.b-select__navigation
+{
+    margin-left: 5px;
+
+    @include flex-center-content;
+}
+
+.b-select-navigation
+{
+    @include smaller-font;
+}

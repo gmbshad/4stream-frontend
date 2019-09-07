@@ -1,0 +1,94 @@
+.b-dashboard-promo
+{
+  border-radius: 5px;
+  border: 1px solid $LIGHT_COLOR;
+  padding: 20px;
+}
+
+.b-dashboard-promo-overview
+{
+  text-align: center;
+}
+
+.b-dashboard-promo__question
+{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.b-dashboard-promo-question
+{
+  @include decreased-font;
+  @include bold-font;
+  color: $THEME_COLOR;
+}
+
+.b-dashboard-promo-list
+{
+  @include small-font;
+}
+
+.b-dashboard-promo-list__item
+{
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.b-dashboard-promo-list-item
+{
+  &.b-dashboard-promo-list-item--link
+  {
+    @include link-on-light;
+  }
+}
+
+.b-dashboard-promo-list-item__icon
+{
+  display: inline;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.b-dashboard-promo-list-item__content
+{
+  display: inline;
+}
+
+.b-dashboard-promo-list-item-content__part
+{
+  display: inline;
+}
+
+.b-dashboard-promo-link
+{
+  display: inline;
+  @include link-on-light;
+}
+
+.b-dashboard-promo-list-item-content
+{
+  display: inline;
+}
+
+.b-dashboard-promo__gift-icon
+{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.b-dashboard-promo-gift-icon
+{
+  color: $VALIDATION_COLOR;
+  opacity: 0.8;
+}
+
+.b-dashboard-promo__participants
+{
+  margin-top: 20px;
+}
+
+.b-dashboard-promo-participants
+{
+  border-radius: 5px;
+  padding: 5px;
+}

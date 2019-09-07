@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<% var localizeString = require('../localization/LocalizationUtils').localizeString %>
+
+	<title><%= localizeString('NEWS_PAGE.TITLE') %></title>
+
+	<% var renderHead = require('./partials/head.js').render %>
+	<%= renderHead(localizeString('NEWS_PAGE.DESCRIPTION')) %>
+
+</head>
+<body class="header-fixed">
+
+<script src="/shared.js"></script>
+<script src="/unify.js"></script>
+
+<div class="wrapper">
+
+	<% var renderHeader = require('./partials/header.js').render %>
+	<%= renderHeader() %>
+
+	<!--=== Content ===-->
+	<div>
+		<div class="bg-color-darker page-title">
+			<h1>
+				<%= localizeString('NEWS_PAGE.HEADER') %>
+			</h1>
+		</div>
+
+		<div class="page-loader"></div>
+
+		<!--=== Content Part ===-->
+		<div class="news-blog container content blog-full-width">
+		</div><!--/container-->
+		<!--=== End Content Part ===-->
+	</div>
+
+	<div class="footer-wrapper">
+		<% var renderFooter = require('./partials/footer.js').render %>
+		<%= renderFooter() %>
+	</div>
+
+</div><!--/wrapper-->
+
+<% var renderGoogleAnalytics = require('../utils/GoogleAnalytics.js').render %>
+<%= renderGoogleAnalytics() %>
+
+</body>
+</html>

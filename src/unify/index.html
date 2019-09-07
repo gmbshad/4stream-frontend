@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<% var localizeString = require('../localization/LocalizationUtils').localizeString %>
+
+	<title><%= localizeString('LANDING_PAGE.TITLE') %></title>
+
+	<% var renderHead = require('./partials/head.js').render %>
+	<%= renderHead(localizeString('LANDING_PAGE.DESCRIPTION')) %>
+
+</head>
+<body class="header-fixed">
+
+<script src="/shared.js"></script>
+<script src="/unify.js"></script>
+
+<div class="wrapper">
+
+	<% var renderHeader = require('./partials/header.js').render %>
+	<%= renderHeader() %>
+
+	<% var localizeString = require('../localization/LocalizationUtils').localizeString %>
+
+	<!-- Interactive Slider v2 -->
+	<div class="interactive-slider-v2 img-v4">
+		<div class="container">
+			<div class="">
+				<h1 class="brand-caption">4stream</h1>
+				<p><%= localizeString('LANDING_PAGE.SERVICE_DESCRIPTION') %></p>
+			</div>
+			<a class="btn btn-u btn-u-blue b-btn-join login-button rounded disabled" href="#">
+				<%= localizeString('LANDING_PAGE.LOGIN_BUTTON') %>
+			</a>
+		</div>
+	</div>
+	<!-- End Interactive Slider v2 -->
+
+	<!--=== Content ===-->
+	<div class="content-md">
+		<div class="container">
+			<!-- Service Box -->
+			<div class="row text-center margin-bottom-60">
+				<div class="col-md-4 md-margin-bottom-50">
+					<div class="advantage-icons margin-bottom-20 md-margin-bottom-30">
+						<i class="rounded-x fa fa-dollar"></i>
+					</div>
+					<h1 class="title-v3-md margin-bottom-10">
+						<%= localizeString('LANDING_PAGE.RATES_CARD_TITLE') %>
+					</h1>
+					<p>
+						<%= localizeString('LANDING_PAGE.RATES_CARD_TEXT') %>
+					</p>
+				</div>
+				<div class="col-md-4 flat-service md-margin-bottom-50">
+					<div class="advantage-icons margin-bottom-20 md-margin-bottom-30">
+						<i class="rounded-x fa fa-microphone"></i>
+					</div>
+					<h2 class="title-v3-md margin-bottom-10">
+						<%= localizeString('LANDING_PAGE.TTS_CARD_TITLE') %>
+					</h2>
+					<p>
+						<%= localizeString('LANDING_PAGE.TTS_CARD_TEXT') %>
+					</p>
+				</div>
+				<div class="col-md-4 flat-service">
+					<div class="advantage-icons margin-bottom-20 md-margin-bottom-30">
+						<i class="rounded-x fa fa-sliders"></i>
+					</div>
+					<h2 class="title-v3-md margin-bottom-10">
+						<%= localizeString('LANDING_PAGE.DASHBOARD_CARD_TITLE') %>
+					</h2>
+					<p>
+						<%= localizeString('LANDING_PAGE.DASHBOARD_CARD_TEXT') %>
+					</p>
+				</div>
+			</div>
+			<!-- End Service Box -->
+		</div><!--/container -->
+
+		<div class="bg-color-light">
+			<div class="container">
+				<div class="row gallery-content margin-bottom-20">
+					<div class="col-sm-6">
+						<!-- Owl Carousel v5 -->
+						<div class="owl-carousel-v5">
+							<div class="owl-slider-v5">
+								<div class="item">
+									<a href="/resources/images/screenshot1.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 1">
+										<span><img class="full-width img-responsive" src="/resources/images/screenshot1.jpg" alt=""></span>
+									</a>
+								</div>
+								<div class="item">
+									<a href="/resources/images/screenshot2.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 2">
+										<span><img class="full-width img-responsive" src="/resources/images/screenshot2.jpg" alt=""></span>
+									</a>
+								</div>
+								<div class="item">
+									<a href="/resources/images/screenshot3.jpg" rel="gallery1" class="fancybox img-hover-v1" title="Image 3">
+										<span><img class="full-width img-responsive" src="/resources/images/screenshot3.jpg" alt=""></span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- End Owl Carousel v5 -->
+					</div>
+					<div class="col-sm-6">
+						<h3 class="header-no-margin"><%= localizeString('SERVICE_DESCRIPTION_PAGE.HEADER')%></h3><br>
+						<p class="no-margin"><%= localizeString('SERVICE_DESCRIPTION_PAGE.DESCRIPTION_PART_1')%></p><br>
+						<p class="no-margin"><%= localizeString('SERVICE_DESCRIPTION_PAGE.DESCRIPTION_PART_2')%></p><br>
+					</div>
+				</div><!--/end row-->
+			</div><!--/end container-->
+		</div>
+	</div>
+	<!--=== End Content ===-->
+
+	<% var renderFooter = require('./partials/footer.js').render %>
+	<%= renderFooter() %>
+
+</div><!--/wrapper-->
+
+<% var renderGoogleAnalytics = require('../utils/GoogleAnalytics.js').render %>
+<%= renderGoogleAnalytics() %>
+
+</body>
+</html>

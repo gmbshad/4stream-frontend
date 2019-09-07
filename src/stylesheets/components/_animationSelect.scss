@@ -1,0 +1,53 @@
+$ANIMATION_SELECT_PREVIEW_BOX_SIZE: 30px;
+
+.b-animation-select
+{
+    @include flex-align-items-center;
+}
+
+.b-animation-select__preview
+{
+    margin-left: 15px;
+}
+
+.b-animation-select-preview
+{
+    width: $ANIMATION_SELECT_PREVIEW_BOX_SIZE;
+    height: $ANIMATION_SELECT_PREVIEW_BOX_SIZE;
+
+    @include flex-center-content;
+}
+
+.b-animation-select-preview-box
+{
+    width: $ANIMATION_SELECT_PREVIEW_BOX_SIZE;
+    height: $ANIMATION_SELECT_PREVIEW_BOX_SIZE;
+
+    background-color: $THEME_COLOR;
+}
+
+.b-animation-select__controls
+{
+    margin-left: 10px;
+}
+
+.b-animation-select-controls
+{
+    display: flex;
+}
+
+.b-animation-select-preview-box__image
+{
+    margin: 4px 5px 0 5px;
+    width: 20px;
+    height: 14px;
+    background-color: $DARK_COLOR;
+}
+
+.b-animation-select-preview-box__text
+{
+    margin: 4px 5px 0 5px;
+    width: 20px;
+    height: 4px;
+    background-color: $FORM_WARNING_COLOR;
+}

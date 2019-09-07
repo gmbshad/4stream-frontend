@@ -1,0 +1,247 @@
+$MAX_CATEGORIES_WIDTH: 950px;
+$DONATION_SETTINGS_LABEL_WIDTH: 220px;
+
+.b-dashboard-categorized-content__categories
+{
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  @include flex-center-content;
+
+  width: 100%;
+  max-width: $MAX_CATEGORIES_WIDTH;
+}
+
+.b-dashboard-categorized-content__content
+{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 680px;
+}
+
+.b-dashboard-category-links
+{
+  width: 100%;
+  display: flex;
+}
+
+.b-dashboard-category-links__item
+{
+  flex-grow: 1;
+  flex-basis:0;
+}
+
+.b-dashboard-category-link
+{
+  background-color: $LIGHTEST_COLOR;
+  padding: 5px 10px 5px 10px;
+  color: $TEXT_DARK_COLOR;
+  cursor: pointer;
+
+  height: 2em;
+
+  @include decreased-font;
+
+  text-align: center;
+  @include flex-center-content;
+
+  border: 1px solid $LIGHT_COLOR;
+  border-left-width: 0;
+
+  &.b-dashboard-category-link--leftmost
+  {
+    border-left-width: 1px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  &.b-dashboard-category-link--rightmost
+  {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  &:hover
+  {
+    background-color: $LIGHTEST_COLOR;
+    color: $THEME_COLOR;
+  }
+
+  &.b-dashboard-category-link--active
+  {
+    background-color: $THEME_COLOR;
+    color: $TEXT_LIGHT_COLOR;
+  }
+}
+
+.b-dashboard-save-settings
+{
+  display: flex;
+  justify-content: center;
+}
+
+.b-dashboard-settings-option
+{
+  display: flex;
+  @include smaller-font;
+  justify-content: flex-start;
+}
+
+.b-dashboard-settings-option__label
+{
+  @include flex-align-items-center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+.b-dashboard-settings-option__value
+{
+  @include flex-align-items-center;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.b-dashboard-settings-option-value
+{
+  width: 100%;
+}
+
+.b-dashboard-settings-form
+{
+  border: 1px solid $LIGHT_COLOR;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.b-dashboard-settings-form__header
+{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.b-dashboard-settings-form-header
+{
+  text-align: center;
+}
+
+.b-dashboard-settings-form__separator
+{
+  @include horizontal-line($TEXT_DARK_COLOR, $LIGHTEST_COLOR);
+  margin-bottom: 20px;
+}
+
+.b-dashboard-settings-form__remark
+{
+  margin-bottom: 8px;
+}
+
+.b-dashboard-settings-form-remark
+{
+  @include smallest-font;
+
+  line-height: 150%;
+
+  &.b-dashboard-settings-form-remark--warning
+  {
+    border-radius: 5px;
+    border: 1px solid $WARNING_BORDER_COLOR;
+    padding: 10px;
+    background-color: $WARNING_BACKGROUND_COLOR;
+  }
+}
+
+.b-dashboard-settings-form__images
+{
+  margin-bottom: 5px;
+}
+
+.b-dashboard-settings-form-images
+{
+  @include flex-center-content;
+}
+
+.b-dashboard-settings-form__image
+{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.b-dashboard-settings-form-image
+{
+  height: 50px;
+  width: auto;
+  background-color: $WHITE_COLOR;
+  border-radius: 5px;
+  border: 1px solid $LIGHT_COLOR;
+}
+
+.b-dashboard-settings-form__option
+{
+  margin-bottom: 24px;
+}
+
+.b-dashboard-settings-option-label
+{
+  width: $DONATION_SETTINGS_LABEL_WIDTH;
+  display: flex;
+}
+
+.b-dashboard-settings-donation-title-template
+{
+  width: 500px;
+}
+
+.b-dashboard-settings-test-donation-links
+{
+  display: flex;
+}
+
+.b-dashboard-settings-test-donation-links__item
+{
+  &.b-dashboard-settings-test-donation-links__item--margin-right
+  {
+    margin-right: 10px;
+  }
+}
+.b-dashboard-settings-option-label__tooltip
+{
+  margin-left: 5px;
+  @include flex-center-content;
+}
+
+.b-dashboard-settings-form__save
+{
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.b-dashboard-category-content__part
+{
+  &.b-dashboard-category-content__part--margin-bottom
+  {
+    margin-bottom: 30px;
+  }
+}
+
+.b-dashboard-link-with-text-preview
+{
+  display: flex;
+}
+
+.b-dashboard-link-with-text-preview__part
+{
+  margin-left: 5px;
+  margin-right: 5px;
+
+  @include flex-align-items-center;
+}
+
+.b-dashboard-settings-tts-voice
+{
+  @include flex-align-items-center;
+}
+
+.b-dashboard-settings-tts-voice__preview
+{
+  margin-left: 5px;
+}

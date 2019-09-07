@@ -1,0 +1,24 @@
+.b-tooltip
+{
+  color: $THEME_COLOR;
+  cursor: pointer;
+
+  &:hover
+  {
+    color: $THEME_COLOR_DARK;
+  }
+}
+
+.b-tooltip-text
+{
+  @include smaller-font;
+  opacity: 1 !important;
+
+  color: $TEXT_LIGHT_COLOR !important;
+  background-color: $DARK_LIGHT_COLOR !important;
+}
+
+.__react_component_tooltip:after
+{
+  border-top-color: $DARK_LIGHT_COLOR !important;
+}

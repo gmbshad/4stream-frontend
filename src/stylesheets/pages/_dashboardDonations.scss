@@ -1,0 +1,28 @@
+$DASHBOARD_DONATIONS_CONTROLS_MARGIN: 15px;
+$DASHBOARD_DONATIONS_CONTROLS_INCREASED_MARGIN: 25px;
+
+.b-dashboard-donations-meta__pagination
+{
+    margin-top: 15px;
+}
+
+.b-dashboard-donations__table
+{
+  margin-top: 10px;
+}
+
+.b-dashboard-donations-controls
+{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.b-dashboard-donations-controls__add
+{
+  margin-left: $DASHBOARD_DONATIONS_CONTROLS_INCREASED_MARGIN;
+}
+
+.b-dashboard-donations-controls__navigate-left
+{
+  margin-right: $DASHBOARD_DONATIONS_CONTROLS_MARGIN;
+}

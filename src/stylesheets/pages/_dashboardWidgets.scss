@@ -1,0 +1,108 @@
+.b-dashboard-donation-goal-container
+{
+  box-sizing: border-box;
+  height: 190px;
+  @include flex-center-content;
+  background-color: $LIGHTER_COLOR;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.b-dashboard-settings-form__donation-goal
+{
+  margin-bottom: 10px;
+}
+
+.b-donation-goal-card
+{
+  display: flex;
+  background-color: $LIGHTEST_COLOR;
+  border-radius: 5px;
+  border: 1px solid $LIGHT_COLOR;
+  color: $TEXT_DARK_COLOR;
+
+  @include smaller-font;
+
+  &.b-donation-goal-card--active
+  {
+    color: $TEXT_LIGHT_COLOR;
+    background-color: $THEME_COLOR;
+  }
+}
+
+.b-donation-goal-actions
+{
+  display: flex;
+}
+
+.b-donation-goal-actions__item
+{
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.b-donation-goal-card-cell
+{
+  min-width: 0;
+
+  &.b-donation-goal-card-cell--grow
+  {
+    flex-grow: 1;
+  }
+
+  &.b-donation-goal-card-cell--shrink
+  {
+    flex-shrink: 1000000;
+  }
+
+  &.b-donation-goal-card-cell--no-shrink
+  {
+    flex-shrink: 0;
+  }
+
+  &.b-donation-goal-card-cell--with-border
+  {
+    border: 0 solid $LIGHT_COLOR;
+    border-right-width: 1px;
+    border-collapse: collapse;
+  }
+
+  &.b-donation-goal-card-cell--date
+  {
+    width: 105px;
+  }
+
+  &.b-donation-goal-card-cell--progress
+  {
+    width: 155px;
+  }
+}
+.b-donation-goal-card-cell__content
+{
+  margin: 10px;
+}
+
+.b-dashboard-settings-form__donation-goals
+{
+  margin-bottom: 30px;
+}
+
+.b-donation-goal-card-cell-content
+{
+  @include overflow-ellipsis;
+}
+
+.b-donation-goal-card__item
+{
+  margin-bottom: 10px;
+}
+
+.b-dashboard-settings-form__add-goal
+{
+  margin: 30px;
+}
+
+.b-dashboard-add-donation-goal
+{
+  @include flex-center-content;
+}

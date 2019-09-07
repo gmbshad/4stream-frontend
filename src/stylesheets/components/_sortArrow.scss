@@ -1,0 +1,17 @@
+.b-sorting-arrow
+{
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+
+  &.b-sorting-arrow--asc
+  {
+    border-bottom: 5px solid white;
+  }
+
+  &.b-sorting-arrow--desc
+  {
+    border-top: 5px solid white;
+  }
+}

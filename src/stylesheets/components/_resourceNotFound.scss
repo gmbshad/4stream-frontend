@@ -1,0 +1,30 @@
+.b-resource-not-found
+{
+    text-align: center;
+}
+
+.b-resource-not-found__code
+{
+    margin-bottom: 20px;
+}
+
+.b-resource-not-found-code
+{
+    font-size: 180px;
+    line-height: 180px;
+}
+
+.b-resource-not-found-text
+{
+    @include big-font;
+}
+
+.b-resource-not-found__text
+{
+    margin-bottom: 30px;
+}
+
+.b-resource-not-found__landing-button
+{
+    margin-bottom: 100px;
+}

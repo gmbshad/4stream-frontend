@@ -1,0 +1,47 @@
+.b-dashboard-sidebar
+{
+  width: $SIDEBAR_WIDTH;
+  border-radius: 8px;
+  border: 1px solid $DARK_COLOR;
+  box-sizing: border-box;
+
+  padding: $SIDEBAR_PADDING;
+
+  background-color: $DARK_LIGHT_COLOR;
+  color: $TEXT_LIGHT_COLOR;
+
+  @include decreased-font;
+}
+
+.b-dashboard-sidebar__item
+{
+  margin: 2px;
+  padding: 5px;
+  cursor: pointer;
+
+  &:hover
+  {
+    color: $THEME_COLOR;
+  }
+
+  &.b-dashboard-sidebar__item--active
+  {
+    background-color: $THEME_COLOR;
+    color: $TEXT_LIGHT_COLOR;
+  }
+}
+
+.b-dashboard-sidebar-item
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.b-dashboard-sidebar-item__icon
+{
+
+  &.b-dashboard-sidebar-item__icon--red
+  {
+    color: $VALIDATION_COLOR
+  }
+}

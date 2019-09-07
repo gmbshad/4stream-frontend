@@ -1,0 +1,13 @@
+.b-dashboard-statistics-total
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.b-dashboard-statistics-total-number
+{
+  @include default-font;
+  color: $THEME_COLOR;
+  text-align: center;
+}

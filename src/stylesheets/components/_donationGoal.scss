@@ -1,0 +1,44 @@
+.b-donation-goal
+{
+  width: 100%;
+  text-shadow: 0 0 1px rgb(0,0,0);
+}
+
+.b-donation-goal-title
+{
+  text-align: center;
+}
+
+.b-donation-goal__indicator
+{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.b-donation-goal-indicator__text
+{
+  @include flex-center-content;
+  height: 100%;
+}
+
+.b-donation-goal-indicator-text
+{
+}
+
+.b-donation-goal-amount-and-date
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.b-donation-goal-indicator__container
+{
+  width: 100%;
+  height: 0;
+}
+
+.b-donation-goal-amount-and-date__item
+{
+  margin-left: 10px;
+  margin-right: 10px;
+}

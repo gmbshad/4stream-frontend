@@ -1,0 +1,24 @@
+.b-styled-text-words
+{
+    @include flex-justify-content-center;
+
+    flex-wrap: wrap;
+}
+
+.b-styled-text-words__word
+{
+    display: inline-block;
+
+    margin-left: 0.2em;
+    margin-right: 0.2em;
+}
+
+.b-styled-text-word
+{
+    display: inline-block;
+}
+
+.b-styled-text-word__char
+{
+    display: inline-block;
+}

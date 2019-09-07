@@ -1,0 +1,36 @@
+.b-textarea
+{
+    @include base-input;
+    height: auto;
+    resize: none;
+
+    vertical-align: top;
+    padding-left: 5px;
+
+    &.b-textarea--fill-parent
+    {
+        width: 100%;
+    }
+
+    &.b-textarea--small
+    {
+        @include smaller-font;
+    }
+}
+
+.b-textarea-caption-wrapper
+{
+    height: 0;
+}
+
+.b-textarea-caption
+{
+    color: $TEXT_DARK_COLOR;
+    @include smaller-font;
+    @include caption;
+
+    &.textarea-caption--small
+    {
+        @include smallest-font;
+    }
+}

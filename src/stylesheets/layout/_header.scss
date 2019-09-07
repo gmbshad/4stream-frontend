@@ -1,0 +1,100 @@
+.b-header
+{
+    display: flex;
+
+    height: $HEADER_HEIGHT;
+    padding: $HEADER_VERTICAL_MARGIN $HEADER_SIDE_MARGIN $HEADER_VERTICAL_MARGIN $HEADER_SIDE_MARGIN;
+
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: $DARK_COLOR;
+    @include small-font;
+}
+
+.b-header-logo
+{
+    height: 60px;
+}
+
+.b-header__controls
+{
+}
+
+.b-header-controls
+{
+    display: flex;
+}
+
+.b-header-controls__item
+{
+    margin: 12px;
+}
+
+.b-login-info-loading
+{
+    color: $TEXT_LIGHT_COLOR;
+}
+
+.b-header-link
+{
+    @include link-on-dark;
+    display: flex;
+}
+
+.b-header-link__icon
+{
+    margin-right: 0;
+}
+
+.b-header-link__anchor
+{
+    user-select: none;
+    margin: 0 5px 0 5px;
+}
+
+.b-login-info__options
+{
+    width: 300px;
+    margin-top: 10px;
+    right: $HEADER_SIDE_MARGIN;
+    position: absolute;
+}
+
+.b-login-info-options
+{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: $DARK_LIGHT_COLOR;
+    color: $TEXT_LIGHT_COLOR;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 1em $THEME_COLOR;
+}
+
+.b-login-info-hidden-link
+{
+    display: none;
+}
+
+.b-login-info-options__separator
+{
+    margin: 10px;
+    @include horizontal-line($LIGHTEST_COLOR, $DARK_LIGHT_COLOR);
+}
+
+.b-login-info-options__item
+{
+    margin: 15px;
+}
+
+.b-login-info-options-item
+{
+    @include link-on-dark;
+    @include small-font;
+
+    &.b-login-info-options-item--disabled
+    {
+        @include link($TEXT_DARK_COLOR, $TEXT_DARK_COLOR);
+    }
+}

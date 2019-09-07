@@ -1,0 +1,111 @@
+.b-donation-page
+{
+    @include flex-align-items-center;
+    flex-direction: column;
+
+    &.b-donation-page--max-height
+    {
+        flex-grow: 1;
+        justify-content: center;
+    }
+}
+
+.b-donation-page__user-not-found
+{
+    margin-top: 30px;
+}
+
+.b-donation-page-user-not-found__icon
+{
+    @include flex-center-content;
+    margin-bottom: 20px;
+}
+
+.b-donation-page-user-not-found-text
+{
+    @include big-font;
+}
+
+.b-donation-page__user-info
+{
+    min-height: 150px;
+    height: 150px;
+    margin-bottom: 5px ;
+
+    @include flex-center-content;
+    flex-direction: column;
+}
+
+.b-donation-page-user-info
+{
+    @include flex-center-content;
+    @include fade-in-animation;
+    flex-direction: column;
+}
+
+.b-donation-page-logo-container
+{
+    text-align: center;
+}
+
+.b-donation-page-logo
+{
+    width: 80px;
+    height: 80px;
+}
+
+.b-donation-page-user-twitch-name
+{
+    color: $THEME_COLOR_DARK;
+}
+
+.b-donation-page-user-stream-status
+{
+    @include smaller-font;
+}
+
+.b-donation-page-user-stream-status-part
+{
+    display: inline;
+    &.b-donation-page-user-stream-status-part--online {
+        color: $GREEN_COLOR;
+    }
+}
+
+.b-donation-page-stream-description
+{
+    font-size: 14px;
+}
+
+.b-donation-page-user-name
+{
+    @include big-font;
+
+    color: $THEME_COLOR_DARK;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.b-donation-page-widget-status
+{
+    font-size: 14px;
+    text-align: center;
+}
+
+.b-donation-page__custom-text
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.b-donation-page-custom-text
+{
+    max-width: 700px;
+    font-size: 16px;
+    font-style: italic;
+    color: $FORM_WARNING_COLOR;
+    text-align: center;
+    word-wrap: break-word;
+}

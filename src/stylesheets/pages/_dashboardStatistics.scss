@@ -1,0 +1,117 @@
+$DASHBOARD_STATISTICS_CONTROLS_MARGIN: 15px;
+$DASHBOARD_STATISTICS_CONTROLS_INCREASED_MARGIN: 25px;
+
+.b-dashboard-statistics__filters
+{
+  margin: 0 0 20px 0;
+}
+
+.b-dashboard-statistics__navigation
+{
+  margin: 20px 0 0 0;
+}
+
+.b-dashboard-statistics__separator
+{
+  margin: 2px;
+  @include horizontal-line($TEXT_DARK_COLOR, $LIGHTEST_COLOR);
+}
+
+.b-dashboard-statistics-filters
+{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.b-dashboard-statistics-navigation
+{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.b-dashboard-statistics-navigation__reset-date
+{
+  margin-left: $DASHBOARD_STATISTICS_CONTROLS_MARGIN;
+}
+
+.b-dashboard-statistics-navigation__shift-date
+{
+  margin-right: $DASHBOARD_STATISTICS_CONTROLS_MARGIN;
+}
+
+.b-dashboard-statistics-filters__interval-picker
+{
+}
+
+.b-dashboard-statistics-filters__statistics-type
+{
+  margin-left: $DASHBOARD_STATISTICS_CONTROLS_MARGIN;
+}
+
+.b-dashboard-statistics-filters__removed-donations
+{
+  margin: auto 0 auto $DASHBOARD_STATISTICS_CONTROLS_INCREASED_MARGIN;
+}
+
+.b-statistics-select
+{
+  width: 180px;
+}
+
+.b-dashboard-statistics-meta
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.b-dashboard-statistics-meta-total
+{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.b-dashboard-statistics-meta__interval
+{
+}
+
+.b-dashboard-statistics-meta__separator
+{
+  margin: 10px;
+}
+
+.b-dashboard-statistics-meta__total
+{
+}
+
+.b-dashboard-statistics-meta-interval
+{
+  @include default-font;
+  text-align: center;
+  color: $TEXT_DARK_COLOR;
+}
+
+.b-dashboard-statistics-meta-total__item
+{
+}
+
+.b-dashboard-statistics__chart
+{
+  width: 100%;
+  margin-top: 10px;
+}
+
+.b-dashboard-chart
+{
+  border-style: solid;
+  border-width: 1px;
+  border-color: $LIGHT_COLOR;
+  border-radius: 5px;
+}
+
+.b-dashboard-chart__content
+{
+  // modification must be reflected in js file as well
+  margin: 10px 20px 10px 10px
+}

@@ -1,0 +1,406 @@
+$PAYMENT_METHOD_HEIGHT: 60px;
+$PAYMENT_METHOD_WIDTH: 80px;
+$PAYMENT_CATEGORY_WIDTH: 200px;
+$PAYMENT_CATEGORY_HEIGHT: 50px;
+$PAYMENT_METHOD_MARGIN: 8px;
+$PAYMENT_METHOD_ROW_WIDTH: 450px;
+$PAYMENT_METHODS_MIN_HEIGHT: 230px;
+
+$DIALOG_CONTENT_SIDE_MARGIN: 20px;
+
+.b-modal-dialog
+{
+  width: 700px;
+
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  background-color: $LIGHTER_COLOR;
+
+  color: $TEXT_DARK_COLOR;
+
+  border-radius: 5px;
+  box-shadow: 0 0 1em $THEME_COLOR;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  z-index: 1;
+
+  &.b-modal-dialog--confirmation
+  {
+    text-align: center;
+  }
+
+  &.b-modal-dialog--donation
+  {
+  }
+
+  &.b-modal-dialog--payment
+  {
+    background-color: $WHITE_COLOR;
+    width: 720px;
+  }
+
+  &.b-modal-dialog--donation-goal
+  {
+    width: 500px;
+  }
+}
+
+.b-modal-dialog__close
+{
+  width: 100%;
+  text-align: right;
+}
+
+.b-modal-dialog-close
+{
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+}
+
+.b-modal-dialog__title
+{
+  margin-left: $DIALOG_CONTENT_SIDE_MARGIN;
+  margin-right: $DIALOG_CONTENT_SIDE_MARGIN;
+  max-width: 100%;
+}
+
+.b-modal-dialog__content
+{
+  margin-left: $DIALOG_CONTENT_SIDE_MARGIN;
+  margin-right: $DIALOG_CONTENT_SIDE_MARGIN;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
+  max-width: 100%;
+
+  @include small-font;
+
+  &.b-modal-dialog__content--donation
+  {
+    width: 600px;
+    margin-bottom: 0;
+  }
+
+  &.b-modal-dialog__content--payment-method
+  {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  &.b-modal-dialog__content--donation-goal
+  {
+    width: 450px;
+    margin-bottom: 0;
+  }
+}
+
+.b-modal-dialog__controls
+{
+  margin-left: $DIALOG_CONTENT_SIDE_MARGIN;
+  margin-right: $DIALOG_CONTENT_SIDE_MARGIN;
+  margin-bottom: 5px;
+}
+
+.b-modal-dialog-title
+{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.b-modal-dialog-text
+{
+  font-size: 16px;
+}
+
+.b-modal-dialog-controls
+{
+  display: flex;
+}
+
+.b-modal-dialog-controls__item
+{
+  margin: 10px;
+}
+
+.b-modal-dialog-payment-wrapper__separator
+{
+  margin-bottom: 10px;
+}
+
+.b-modal-dialog-payment-content-separator
+{
+  margin-top: 0;
+  margin-bottom: 15px;
+  @include horizontal-line($LIGHT_COLOR, $LIGHTER_COLOR);
+}
+
+.b-modal-dialog-payment__categories
+{
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.b-modal-dialog-payment
+{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.b-modal-dialog-payment-categories
+{
+  @include small-font;
+  width: $PAYMENT_CATEGORY_WIDTH;
+}
+
+.b-modal-dialog-payment-category
+{
+  width: $PAYMENT_CATEGORY_WIDTH;
+  height: $PAYMENT_CATEGORY_HEIGHT;
+  box-sizing: border-box;
+  padding: 10px;
+
+  border-style: solid;
+  border-width: 1px;
+  border-bottom-width: 0;
+  border-color: $LIGHT_COLOR;
+
+  cursor: pointer;
+
+  &:hover
+  {
+    background-color: lavender;
+  }
+
+  &.b-modal-dialog-payment-category--active
+  {
+    background-color: $THEME_COLOR;
+    color: $TEXT_LIGHT_COLOR;
+  }
+
+  &.b-modal-dialog-payment-category--first
+  {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+  }
+
+  &.b-modal-dialog-payment-category--last
+  {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-width: 1px;
+  }
+}
+
+.b-modal-dialog-payment-methods
+{
+  min-height: $PAYMENT_METHODS_MIN_HEIGHT;
+}
+
+.b-modal-dialog-payment-methods__desc
+{
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.b-modal-dialog-payment-methods-desc
+{
+  @include smaller-font;
+  text-align: center;
+}
+
+.b-modal-dialog-payment-methods__row
+{
+  margin-bottom: 20px;
+}
+
+.b-modal-dialog-payment-methods-row
+{
+  min-width: $PAYMENT_METHOD_ROW_WIDTH;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.b-modal-dialog-payment-methods-row__item
+{
+  margin: 0 $PAYMENT_METHOD_MARGIN 0 $PAYMENT_METHOD_MARGIN;
+}
+
+.b-modal-dialog-payment-methods-unavailable-reason
+{
+  @include smaller-font;
+  text-align: center;
+  color: $VALIDATION_COLOR;
+}
+
+.b-modal-dialog-payment-wrapper__fee-estimate
+{
+}
+
+.b-modal-dialog-payment-fee-estimate
+{
+  @include bold-font;
+  min-height: 20px;
+  text-align: center;
+}
+
+.b-modal-dialog-payment-method
+{
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 5px;
+  border-color: lavender;
+  height: $PAYMENT_METHOD_HEIGHT;
+  width: $PAYMENT_METHOD_WIDTH;
+  overflow: hidden;
+
+  padding: 5px;
+  cursor: pointer;
+
+  &:hover
+  {
+    border-color: rgba(86, 113, 188, 0.6);
+  }
+
+  &.b-modal-dialog-payment-method--active
+  {
+    border-color: $GREEN_COLOR;
+  }
+}
+
+.b-modal-dialog-payment-method__image
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  max-height: $PAYMENT_METHOD_HEIGHT;
+  width: auto;
+}
+
+.b-modal-dialog-donation-info
+{
+  display: flex;
+  flex-direction: column;
+  @include small-font;
+
+  border-radius: 5px;
+}
+
+.b-modal-dialog-donation-info__row
+{
+  margin: 5px 10px 5px 10px;
+
+  &.b-modal-dialog-donation-info__row--first
+  {
+    margin-top: 10px;
+  }
+
+  &.b-modal-dialog-donation-info__row--last
+  {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.b-modal-dialog-donation-info-row
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+$MODAL_DIALOG_DONATION_INFO_LABEL_WIDTH: 200px;
+
+.b-modal-dialog-donation-info-row-label
+{
+  width: $MODAL_DIALOG_DONATION_INFO_LABEL_WIDTH;
+  @include bold-font;
+}
+
+.b-modal-dialog-donation-info-row-content
+{
+  width: 440px;
+  word-wrap: break-word;
+}
+
+.b-modal-dialog-donation-info-row-content-sender-link
+{
+  @include link-on-light;
+}
+
+.b-modal-dialog-iframe
+{
+  border-style: solid;
+  border-width: 1px;
+  border-color: $LIGHT_COLOR;
+}
+
+.b-modal-dialog-donation-goal__input
+{
+  margin-bottom: 30px;
+}
+
+.b-modal-dialog-font__preview
+{
+  margin-bottom: 20px;
+}
+
+.b-modal-dialog-font-preview
+{
+  @include flex-center-content;
+
+  width: 550px;
+  height: 120px;
+
+  background: url('/resources/images/white_grey_grid.png');
+  background-repeat: repeat;
+}
+
+.b-modal-dialog-font__setting
+{
+  margin-bottom: 10px;
+
+  &.b-modal-dialog-font__setting--increased-margin
+  {
+    margin-bottom: 20px;
+  }
+}
+
+.b-modal-dialog-font-setting
+{
+  display: flex;
+}
+
+.b-modal-dialog-font-setting__label
+{
+  width: 200px;
+}
+
+.b-modal-dialog-font-setting-label
+{
+  @include bold-font;
+}
+
+.b-welcome-dialog
+{
+  text-align: center;
+}
+
+.b-welcome-dialog__part
+{
+  margin-bottom: 15px;
+}
+
+.b-welcome-dialog-link
+{
+  @include link-on-light;
+}

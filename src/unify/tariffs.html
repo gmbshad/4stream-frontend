@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<% var localizeString = require('../localization/LocalizationUtils').localizeString %>
+
+	<title><%= localizeString('TARIFFS_PAGE.TITLE') %></title>
+
+	<% var renderHead = require('./partials/head.js').render %>
+    <%= renderHead(localizeString('TARIFFS_PAGE.DESCRIPTION')) %>
+
+</head>
+<body class="header-fixed">
+
+<script src="/shared.js"></script>
+<script src="/unify.js"></script>
+
+<div class="wrapper">
+
+	<% var renderHeader = require('./partials/header.js').render %>
+	<%= renderHeader() %>
+
+	<% var renderDirectPaymentsTable = require('./utils/RenderUtils').renderDirectPaymentsTable %>
+	<% var renderUnitpayPaymentsTable = require('./utils/RenderUtils').renderUnitpayPaymentsTable %>
+	<% var renderPaymentsWithdrawTable = require('./utils/RenderUtils').renderPaymentsWithdrawTable %>
+	<% var renderDirectPaymentsText = require('./utils/RenderUtils').renderDirectPaymentsText %>
+	<% var renderUnitpayPaymentsText = require('./utils/RenderUtils').renderUnitpayPaymentsText %>
+	<% var renderFeeCalculator = require('./utils/RenderUtils').renderFeeCalculator %>
+
+	<div>
+		<div class="bg-color-darker page-title">
+			<h1><%= localizeString('TARIFFS_PAGE.HEADER') %></h1>
+		</div>
+		<div class="container content">
+            <div class="row">
+                <% var renderNavigation = require('./partials/helpNavigation.js').render %>
+                <%= renderNavigation() %>
+                <div class="col-md-10">
+                    <p>
+                        <%= localizeString('TARIFFS_PAGE.OVERVIEW') %>
+                    </p>
+                    <div class="fee-calculator">
+                        <h3>
+                            <%= localizeString('TARIFFS_PAGE.FEE_CALCULATOR_HEADER') %>
+                        </h3>
+                        <p>
+                            <%= localizeString('TARIFFS_PAGE.FEE_CALCULATOR_CONTENT') %>
+                        </p>
+
+                        <%= renderFeeCalculator() %>
+                    </div>
+
+                    <h3>
+                        <%= localizeString('TARIFFS_PAGE.DIRECT_PAYMENTS_HEADER') %>
+                    </h3>
+                    <p>
+                        <%= renderDirectPaymentsText() %>
+                    </p>
+                    <%= renderDirectPaymentsTable() %>
+                    <h3>
+                        <%= localizeString('TARIFFS_PAGE.AGGREGATOR_PAYMENTS_HEADER') %>
+                    </h3>
+                    <p>
+                        <%= renderUnitpayPaymentsText() %>
+                    </p>
+                    <%= renderUnitpayPaymentsTable() %>
+                    <h3>
+                        <%= localizeString('TARIFFS_PAGE.WITHDRAW_HEADER') %>
+                    </h3>
+                    <p>
+                        <%= localizeString('TARIFFS_PAGE.AGGREGATOR_PAYMENTS_WITHDRAW') %>
+                    </p>
+                    <%= renderPaymentsWithdrawTable() %>
+                </div>
+            </div>
+		</div>
+	</div>
+
+	<% var renderFooter = require('./partials/footer.js').render %>
+	<%= renderFooter() %>
+
+</div><!--/wrapper-->
+
+<% var renderGoogleAnalytics = require('../utils/GoogleAnalytics.js').render %>
+<%= renderGoogleAnalytics() %>
+
+</body>
+</html>

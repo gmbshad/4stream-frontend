@@ -1,0 +1,10 @@
+body,
+button
+{
+    @include decreased-font;
+}
+
+.b-app-container__notifications
+{
+    @include small-font;
+}

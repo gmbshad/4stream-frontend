@@ -1,0 +1,139 @@
+.b-donation-form-container
+{
+    width: 100%;
+}
+
+.b-donation-form
+{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    color: $TEXT_DARK_COLOR;
+}
+
+.b-donation-form__recipient
+{
+    text-align: center;
+    margin-bottom: 10px;
+
+    @include donation-form-input-element;
+}
+
+.b-donation-form-recipient
+{
+    text-decoration: none;
+    color: $THEME_COLOR_DARK;
+}
+
+.b-donation-form__input
+{
+    @include donation-form-input-element;
+    margin: 10px;
+    margin-bottom: 20px;
+
+    &.b-donation-form__input--speech-preview
+    {
+        margin-left: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.b-donation-form-sender-amount
+{
+    display: flex;
+}
+
+.b-donation-form-sender-amount__sender
+{
+    flex-grow: 1;
+}
+
+.b-donation-form-sender-amount__amount
+{
+    flex-grow: 0;
+
+    margin-left: 20px;
+    margin-right: 5px;
+
+    @include flex-center-content;
+}
+
+.b-donation-form-sign
+{
+    @include flex-align-items-center;
+}
+
+.b-donation-form-sign__tooltip
+{
+    margin-left: 10px;
+}
+
+.b-donation-form__controls
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.b-donation-form-controls
+{
+    display: flex;
+    justify-content: center;
+}
+
+.b-donation-form-controls__item
+{
+    margin: 0 10px 0 10px;
+}
+
+.b-donation-form-wrapper
+{
+    width: 100%;
+}
+
+.b-donation-form-webmoney
+{
+    display: none;
+}
+
+.b-donation-form-yandex
+{
+    display: none;
+}
+
+.b-donation-form-unitpay
+{
+    display: none;
+}
+
+.b-donation-form-speech-preview
+{
+    display: inline-flex;
+    @include small-font;
+    @include link-on-light;
+
+    user-select: none;
+
+    &.b-donation-form-speech-preview--disabled
+    {
+        @include disabled-link;
+        cursor: default;
+    }
+}
+
+.b-donation-form-speech-preview__icon
+{
+    margin-right: 4px;
+}
+
+.b-donation-form__manual-remark
+{
+    @include donation-form-input-element;
+    margin-left: 20px;
+}
+
+.b-donation-form-manual-remark
+{
+    @include smaller-font;
+}

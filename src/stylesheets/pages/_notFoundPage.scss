@@ -1,0 +1,11 @@
+.b-page-not-found
+{
+    @include flex-center-content;
+    flex-grow: 1;
+
+    text-align: center;
+}
+
+.b-page-not-found__resource
+{
+}

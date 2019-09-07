@@ -1,0 +1,37 @@
+.b-remark
+{
+    @include small-font;
+
+    opacity: 0.8;
+    padding: 5px;
+    background-color: #ffcd3b;
+    color: black;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $WARNING_BORDER_COLOR;
+
+    &.b-remark--clickable
+    {
+        cursor: pointer;
+
+        &:hover
+        {
+            opacity: 1.0;
+        }
+    }
+}
+
+.b-remark-line
+{
+    &.b-remark-line--indent
+    {
+        margin-left: 5px;
+        margin-top: 3px;
+    }
+
+    &.b-remark-line--center
+    {
+        text-align: center;
+    }
+}

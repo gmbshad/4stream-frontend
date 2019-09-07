@@ -1,0 +1,166 @@
+$DONATION_TABLE_DATE_WIDTH: 145px;
+$DONATION_TABLE_TYPE_WIDTH: 70px;
+$DONATION_TABLE_SENDER_WIDTH: 150px;
+$DONATION_TABLE_AMOUNT_WIDTH: 90px;
+$DONATION_TABLE_ACTIONS_WIDTH: 60px;
+
+$DONATION_TABLE_MIN_CELL_WIDTH: 40px;
+// it's a witty hack to prevent other columns from shrinking until "message" shrinks to its min width!
+$DONATION_MESSAGE_SHRINK_FACTOR: 1000000;
+
+.b-donation-table
+{
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: $LIGHT_COLOR;
+}
+
+.b-donation-table-header
+{
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: $THEME_COLOR_DARK;
+  border-radius: 5px 5px 0 0;
+  color: $TEXT_LIGHT_COLOR;
+}
+
+.b-donation-table-header__cell
+{
+  padding: 5px;
+  overflow: hidden;
+
+  min-width: $DONATION_TABLE_MIN_CELL_WIDTH;
+  flex-shrink: 1;
+
+  &.b-donation-table-header__cell--date
+  {
+    width: $DONATION_TABLE_DATE_WIDTH;
+  }
+
+  &.b-donation-table-header__cell--type
+  {
+    width: $DONATION_TABLE_TYPE_WIDTH;
+  }
+
+  &.b-donation-table-header__cell--sender
+  {
+    width: $DONATION_TABLE_SENDER_WIDTH;
+  }
+
+  &.b-donation-table-header__cell--sum
+  {
+    width: $DONATION_TABLE_AMOUNT_WIDTH;
+  }
+
+  &.b-donation-table-header__cell--message
+  {
+    flex-grow: 1;
+    flex-shrink: $DONATION_MESSAGE_SHRINK_FACTOR;
+  }
+
+  &.b-donation-table-header__cell--actions
+  {
+    min-width: $DONATION_TABLE_ACTIONS_WIDTH;
+    flex-shrink: 0
+  }
+}
+
+.b-donation-table-header-cell
+{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &.b-donation-table-header-cell--cursor-pointer
+  {
+    cursor: pointer;
+  }
+}
+
+.b-donation-table-header-cell__text
+{
+  @include overflow-ellipsis;
+}
+
+.b-donation-table-header-cell__arrow
+{
+  margin-left: 3px;
+}
+
+//////////////////////////////////////////////
+
+.b-donation-table-row
+{
+  display: flex;
+  padding: 2px 0 2px 0;
+  @include small-font;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-color: $LIGHT_COLOR;
+}
+
+.b-donation-table-row__cell
+{
+  padding: 5px;
+  overflow: hidden;
+
+  min-width: $DONATION_TABLE_MIN_CELL_WIDTH;
+  flex-shrink: 1;
+
+  &.b-donation-table-row__cell--clickable
+  {
+    cursor: pointer;
+  }
+
+  &.b-donation-table-row__cell--date
+  {
+    width: $DONATION_TABLE_DATE_WIDTH;
+  }
+
+  &.b-donation-table-row__cell--type
+  {
+    width: $DONATION_TABLE_TYPE_WIDTH;
+  }
+
+  &.b-donation-table-row__cell--sender
+  {
+    width: $DONATION_TABLE_SENDER_WIDTH;
+  }
+
+  &.b-donation-table-row__cell--sum
+  {
+    width: $DONATION_TABLE_AMOUNT_WIDTH;
+  }
+
+  &.b-donation-table-row__cell--message
+  {
+    flex-grow: 1;
+    flex-shrink: $DONATION_MESSAGE_SHRINK_FACTOR;
+  }
+
+  &.b-donation-table-row__cell--actions
+  {
+    min-width: $DONATION_TABLE_ACTIONS_WIDTH;
+    flex-shrink: 0
+  }
+}
+
+.b-donation-table-row-cell
+{
+  @include smallest-font;
+  @include overflow-ellipsis;
+}
+
+.b-donation-table-row-actions
+{
+  width: $DONATION_TABLE_ACTIONS_WIDTH;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.b-donation-table-row-actions__item
+{
+  margin: 0 5px 0 5px;
+}

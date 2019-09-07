@@ -1,0 +1,80 @@
+.b-app-container
+{
+    padding-left: $CONTENT_PADDING;
+    padding-right: calc(#{$CONTENT_PADDING} - (100vw - 100%));
+    background-color: $DARK_COLOR;
+
+    &.b-app-container--widget
+    {
+        padding-left: 0;
+        padding-right: 0;
+        background-color: rgba(255, 255, 255, 0.0);
+    }
+}
+
+.b-app-container__page
+{
+    &.b-app-container__page--inactive
+    {
+        pointer-events: none;
+        user-select: none;
+    }
+}
+
+body
+{
+    margin: 0;
+}
+
+p
+{
+    text-indent: 20px;
+}
+
+// http://stackoverflow.com/questions/3556157/how-to-customize-the-html5-input-range-type-looks-using-css
+@mixin slider-track() {
+    background-color: $LIGHTEST_COLOR;
+    border-radius: 5px;
+    border: 1px solid $LIGHT_COLOR;
+    height: 20px;
+}
+@mixin slider-thumb() {
+    background-color: $LIGHTEST_COLOR;
+    height: 18px;
+    width: 18px;
+    border: 1px solid $LIGHT_COLOR;
+    border-radius: 5px;
+}
+input[type='range'] {
+    -webkit-appearance: none !important;
+    width: $INPUT_WIDTH;
+    background-color: rgba(0,0,0,0);
+}
+input[type=range]::-webkit-slider-runnable-track {
+    @include slider-track;
+}
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    @include slider-thumb;
+}
+input[type=range]::-moz-range-track {
+    @include slider-track;
+}
+input[type=range]::-moz-range-thumb {
+    @include slider-thumb;
+}
+input[type="range"]::-ms-fill-upper {
+    background-color: $LIGHTEST_COLOR;
+    border-radius: 0 5px 5px 0;
+}
+input[type="range"]::-ms-fill-lower {
+    background-color: $LIGHTEST_COLOR;
+    border-radius: 5px 0 0 5px;
+}
+input[type="range"]::-ms-track {
+    @include slider-track;
+    color: $LIGHTEST_COLOR;
+}
+input[type="range"]::-ms-thumb {
+    @include slider-thumb;
+}

@@ -1,0 +1,52 @@
+@keyframes flash {
+  0%, 100%, 50% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0.3;
+  }
+}
+
+@mixin fade-in-animation {
+  animation-name: fade-in;
+  animation-duration: 2s;
+}
+
+@keyframes fade-in {
+  from {opacity: 0.0;}
+  to {opacity: 1.0}
+}
+
+@mixin fade-animation {
+  animation: 1s fade-animation linear infinite;
+}
+
+@keyframes fade-animation {
+  0% { opacity: 0.75; }
+  25% { opacity: 1.0; }
+  50% { opacity: 0.75; }
+  75% { opacity: 0.5; }
+  100% { opacity: 0.75; }
+}
+
+@mixin fade-in-fade-out-animation {
+  animation: 10s fade-in-fade-out-animation linear;
+}
+
+@keyframes fade-in-fade-out-animation {
+  0% { opacity: 0.0; }
+  20% { opacity: 1.0; }
+  80% { opacity: 1.0; }
+  100% { opacity: 0.0; }
+}
+
+@mixin scale-animation {
+  animation: 0.5s scale-animation ease-out;
+}
+
+@keyframes scale-animation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}

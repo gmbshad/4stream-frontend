@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head profile="http://www.w3.org/2005/10/profile">
+  <meta charset="UTF-8">
+  <title>4stream</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="/dashboard.css" charset="utf-8">
+  <link rel="icon" type="image/png" href="/resources/images/favicon.png">
+</head>
+<body>
+  <div id="stream-assist"></div>
+  <script src="/shared.js"></script>
+  <script src="/dashboard.js"></script>
+  <% var renderGoogleAnalytics = require('./utils/GoogleAnalytics.js').render %>
+  <%= renderGoogleAnalytics() %>
+</body>
+</html>

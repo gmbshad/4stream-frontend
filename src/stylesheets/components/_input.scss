@@ -1,0 +1,72 @@
+.b-input-caption-wrapper
+{
+  height: 0;
+}
+
+.b-input-caption
+{
+  color: $VALIDATION_COLOR;
+  @include smaller-font;
+  @include caption;
+
+  &.b-input-caption--hidden
+  {
+    visibility: hidden;
+  }
+
+  &.b-input-caption--small
+  {
+    @include smallest-font;
+  }
+
+  &.b-input-caption--info
+  {
+    color: $TEXT_DARK_COLOR;
+  }
+}
+
+.b-input-internal
+{
+  display: flex;
+}
+
+.b-input-field
+{
+  padding-left: 5px;
+  @include base-input;
+
+  &.b-input-field--fill-parent
+  {
+    width: 100%;
+  }
+
+  &.b-input-field--small
+  {
+    @include smaller-font;
+  }
+
+  &.b-input-field--narrow
+  {
+    width: 165px;
+  }
+
+  &.b-input-field--wide
+  {
+    width: 270px;
+  }
+
+  &.b-input-field--cursor-pointer
+  {
+    cursor: pointer;
+  }
+
+  &.b-input-field--borderless
+  {
+    border-style: none;
+  }
+
+  &.b-input-field--grey
+  {
+    background-color: $LIGHT_COLOR
+  }
+}

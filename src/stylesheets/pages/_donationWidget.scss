@@ -1,0 +1,84 @@
+$DONATION_REMARK_FONT_SIZE: '48px';
+
+@mixin donation-widget-text($font-size, $font-color, $line-height)
+{
+    word-wrap: break-word;
+
+    font-size: calc(#{$font-size});
+    line-height: $line-height;
+
+    text-align: center;
+    color: $font-color;
+    text-shadow: 0 0 1px black;
+}
+
+.b-donation-widget__audio-elements
+{
+    //display: none;
+}
+
+.b-donation-widget-wrapper
+{
+    overflow: hidden;
+}
+
+.b-donation-widget
+{
+    height: 100vh;
+
+    &.b-donation-widget--hidden
+    {
+        visibility: hidden;
+    }
+}
+
+// 37vh total
+.b-donation-picture
+{
+    width: 100%;
+    height: 37vh;
+}
+
+.b-donation-picture__bounding-box
+{
+    @include scale-center-image;
+    height: 100%;
+    width: 100%;
+}
+
+// 28vh total
+.b-donation-widget__meta
+{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+    overflow: hidden;
+}
+
+.b-donation-widget-meta
+{
+}
+
+// 35hv left
+.b-donation-widget__message
+{
+}
+
+.b-donation-widget-message
+{
+}
+
+.b-donation-widget__remark
+{
+    position: fixed;
+    top: 50%;
+    width: 100%;
+    transform: translate(0, -50%);
+}
+
+.b-donation-widget-remark
+{
+    opacity: 0;
+    @include donation-widget-text($DONATION_REMARK_FONT_SIZE, $THEME_COLOR, 1.2);
+    @include fade-in-fade-out-animation;
+}

@@ -1,0 +1,191 @@
+@mixin flex-justify-content-center
+{
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-align-items-center
+{
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center-content
+{
+    @include flex-align-items-center;
+    @include flex-justify-content-center;
+}
+
+@mixin default-text-padding
+{
+    padding: 5px;
+}
+
+@mixin default-font-properties
+{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@mixin default-font
+{
+    @include default-font-properties;
+    font-size: 20px;
+}
+
+@mixin slightly-increased-font
+{
+    @include default-font-properties;
+    font-size: 22px;
+}
+
+@mixin increased-font
+{
+    @include default-font-properties;
+    font-size: 24px;
+}
+
+@mixin big-font
+{
+    @include default-font-properties;
+    font-size: 28px;
+}
+
+@mixin bigger-font
+{
+    @include default-font-properties;
+    font-size: 32px;
+}
+
+@mixin decreased-font
+{
+    @include default-font-properties;
+    font-size: 18px;
+}
+
+@mixin small-font
+{
+    @include default-font-properties;
+    font-size: 16px;
+}
+
+@mixin smaller-font
+{
+    @include default-font-properties;
+    font-size: 14px;
+}
+
+@mixin smallest-font
+{
+    @include default-font-properties;
+    font-size: 12px;
+}
+
+@mixin bold-font
+{
+    font-weight: 700;
+}
+
+@mixin italic-font
+{
+    font-style: italic;
+}
+
+@mixin donation-form-input-element
+{
+    width: 100%;
+    max-width: $DONATION_FORM_INPUT_WIDTH_MAX;
+    min-width: $DONATION_FORM_INPUT_WIDTH_MIN;
+}
+
+@mixin link($inactiveColor: $TEXT_DARK_COLOR, $hoverColor: $THEME_COLOR)
+{
+    text-decoration: none;
+
+    color: $inactiveColor;
+    cursor: pointer;
+
+    &:hover
+    {
+        color: $hoverColor;
+    }
+}
+
+@mixin disabled-link
+{
+    @include link($THEME_COLOR, $THEME_COLOR);
+    opacity: 0.65;
+}
+
+@mixin link-on-light
+{
+    @include link($THEME_COLOR, $THEME_COLOR_DARK);
+}
+
+@mixin link-on-dark
+{
+    @include link($TEXT_LIGHT_COLOR, $THEME_COLOR);
+}
+
+
+@mixin base-input($width: $INPUT_WIDTH)
+{
+    width: $width;
+    box-sizing: border-box;
+
+    color: $TEXT_DARK_COLOR;
+    border-radius: 5px;
+    border: $INPUT_BORDER_WIDTH solid $LIGHT_COLOR;
+    background-color: $INPUT_BACKGROUND_COLOR;
+
+    @include decreased-font;
+}
+
+@mixin overflow-ellipsis
+{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin horizontal-line($centerColor, $edgeColor)
+{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, $edgeColor, $centerColor, $edgeColor);
+}
+
+$CAPTION_TOP_PADDING: 2px;
+$CAPTION_LEFT_PADDING: 5px;
+
+@mixin caption()
+{
+    white-space: nowrap;
+    overflow: hidden;
+    padding-top: $CAPTION_TOP_PADDING;
+    padding-left: $CAPTION_LEFT_PADDING;
+}
+
+@mixin scale-center-image()
+{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin content-padding()
+{
+    padding: $CONTENT_VERTICAL_PADDING $CONTENT_HORIZONTAL_PADDING $CONTENT_VERTICAL_PADDING $CONTENT_HORIZONTAL_PADDING;
+}
+
+@mixin news-media-item
+{
+    border-width: 1px;
+    border-style: solid;
+    border-color: $LIGHTER_COLOR;
+    border-radius: 5px;
+
+    padding: 3px;
+
+    width: 100%;
+    max-width: 600px;
+}

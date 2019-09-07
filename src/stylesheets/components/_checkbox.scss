@@ -1,0 +1,45 @@
+$CHECKBOX_SIZE: 21px;
+
+.b-checkbox
+{
+  cursor: pointer;
+  @include flex-align-items-center;
+}
+
+.b-checkbox__input {
+  display:none;
+}
+
+.b-checkbox-label
+{
+  @include small-font;
+  cursor: pointer;
+}
+
+.b-checkbox-label__box
+{
+  display: inline;
+  margin-right: 5px;
+}
+
+.b-checkbox-box {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  height: $CHECKBOX_SIZE;
+
+  color: $TEXT_DARK_COLOR;
+
+  @include base-input($CHECKBOX_SIZE);
+  @include smaller-font;
+}
+
+.b-checkbox-box-check
+{
+  &.b-checkbox-box-check--hidden
+  {
+    visibility: hidden;
+  }
+}
+

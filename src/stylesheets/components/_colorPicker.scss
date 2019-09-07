@@ -1,0 +1,71 @@
+$COLOR-PICKER-LABEL-WIDTH: 50px;
+$COLOR-PICKER-LABEL-HEIGHT: 25px;
+
+$COLOR-PICKER-PADDING: 15px;
+$COLOR-PICKER-HEIGHT: 180px;
+$COLOR-PICKER-CANVAS-WIDTH: 180px;
+$COLOR-PICKER-STRIPE-WIDTH: 40px;
+$COLOR-PICKER-CANVAS-STRIPE-OFFSET-WIDTH: 10px;
+$COLOR-PICKER-BORDER-WIDTH: 1px;
+$COLOR-PICKER-LABEL-BORDER-WIDTH: 1px;
+
+
+.b-color-picker-container
+{
+    box-sizing: border-box;
+}
+
+.b-color-picker-label {
+    box-sizing: border-box;
+    height: $COLOR-PICKER-LABEL-HEIGHT;
+    width: $COLOR-PICKER-LABEL-WIDTH;
+    border: $COLOR-PICKER-LABEL-BORDER-WIDTH solid white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.b-color-picker-wrapper
+{
+    height: 0;
+}
+
+.b-color-picker-value
+{
+    @include flex-align-items-center;
+}
+
+.b-color-picker-value__label
+{
+    margin-left: 5px;
+}
+
+.b-color-picker
+{
+    box-sizing: border-box;
+    position: relative;
+    top: calc(-#{$COLOR-PICKER-HEIGHT} - 2 * #{$COLOR-PICKER-PADDING} - #{$COLOR-PICKER-LABEL-HEIGHT} - 2 * #{$COLOR-PICKER-LABEL-BORDER-WIDTH});
+    background-color: white;
+    height: calc(#{$COLOR-PICKER-HEIGHT} + 2 * #{$COLOR-PICKER-PADDING}  + 2 * #{$COLOR-PICKER-BORDER-WIDTH});
+    width: calc(#{$COLOR-PICKER-CANVAS-WIDTH} + 2 * #{$COLOR-PICKER-PADDING} +
+        #{$COLOR-PICKER-CANVAS-STRIPE-OFFSET-WIDTH} + #{$COLOR-PICKER-STRIPE-WIDTH} + 2 * #{$COLOR-PICKER-BORDER-WIDTH});
+    border: solid $COLOR-PICKER-BORDER-WIDTH #ccc;
+    border-radius: 5px;
+    transition: all 0.3s;
+    opacity: 1;
+
+    &.b-color-picker--hidden
+    {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &.b-color-picker--bottom
+    {
+        top: 0;
+    }
+}
+
+.b-color-picker-canvas
+{
+    cursor: crosshair;
+}

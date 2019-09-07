@@ -1,0 +1,27 @@
+// Note: those vector flag images have 4:3 aspect ratio, it must be maintained!
+$LOCALE_PICKER_IMAGE_WIDTH: 28px;
+$LOCALE_PICKER_IMAGE_HEIGHT: 21px;
+
+.b-locale-picker
+{
+    cursor: pointer;
+    border: 1px solid $DARK_LIGHT_COLOR;
+}
+
+.b-locale-picker-image
+{
+    width: $LOCALE_PICKER_IMAGE_WIDTH;
+    height: $LOCALE_PICKER_IMAGE_HEIGHT;
+
+    background-size: 100% 100%;
+
+    &.b-locale-picker-image--ru
+    {
+        background-image: url('/resources/images/ru.svg');
+    }
+
+    &.b-locale-picker-image--en
+    {
+        background-image: url('/resources/images/en.svg');
+    }
+}

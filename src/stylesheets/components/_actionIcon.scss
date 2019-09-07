@@ -1,0 +1,27 @@
+.b-action-item
+{
+  @include flex-center-content;
+
+  width: 18px;
+  height: 18px;
+
+  background-size: 100%;
+  cursor: pointer;
+
+  color: $THEME_COLOR;
+
+  &:hover
+  {
+    color: $THEME_COLOR_DARK;
+  }
+
+  &.b-action-item--white
+  {
+    color: $TEXT_LIGHT_COLOR;
+
+    &:hover
+    {
+      color: $THEME_COLOR_DARK;
+    }
+  }
+}

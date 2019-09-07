@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<% var localizeString = require('../localization/LocalizationUtils').localizeString %>
+
+	<title><%= localizeString('GUIDE_PAGE.TITLE') %></title>
+
+	<% var renderHead = require('./partials/head.js').render %>
+	<%= renderHead(localizeString('GUIDE_PAGE.DESCRIPTION')) %>
+
+</head>
+<body class="header-fixed">
+
+<script src="/shared.js"></script>
+<script src="/unify.js"></script>
+
+<div class="wrapper">
+
+	<% var renderHeader = require('./partials/header.js').render %>
+	<%= renderHeader() %>
+
+	<div>
+		<div class="bg-color-darker page-title">
+			<h1><%= localizeString('GUIDE_PAGE.HEADER.GENERAL') %></h1>
+		</div>
+		<div class="container content">
+            <div class="row">
+                <% var renderNavigation = require('./partials/helpNavigation.js').render %>
+                <%= renderNavigation() %>
+                <div class="col-md-10">
+                    <!-- Tab v2 -->
+                    <div class="tab-v2">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#viewers_guide" data-toggle="tab"><%= localizeString('GUIDE_PAGE.HEADER.VIEWER') %></a></li>
+                            <li><a href="#streamers_guide" data-toggle="tab"><%= localizeString('GUIDE_PAGE.HEADER.STREAMER') %></a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="viewers_guide">
+                                <h4><%= localizeString('GUIDE_PAGE.VIEWER.HEADER') %></h4>
+                                <p><strong><%= localizeString('GUIDE_PAGE.VIEWER.CONTENT_1') %></strong></p>
+                                <p><%= localizeString('GUIDE_PAGE.VIEWER.CONTENT_2') %></p>
+                                <p><%= localizeString('GUIDE_PAGE.VIEWER.CONTENT_3') %></p>
+                                <img class="img-responsive img-bordered guide-image" src="/resources/images/how_to_viewer_1.png" alt="">
+                                <p><%= localizeString('GUIDE_PAGE.VIEWER.CONTENT_4') %></p>
+                                <img class="img-responsive img-bordered guide-image" src="/resources/images/how_to_viewer_2.png" alt="">
+                                <p><%= localizeString('GUIDE_PAGE.VIEWER.CONTENT_5') %></p>
+                                <img class="img-responsive img-bordered guide-image" src="/resources/images/how_to_viewer_3.png" alt="">
+                                <p><%= localizeString('GUIDE_PAGE.VIEWER.CONTENT_6') %></p>
+                                <p><%= localizeString('GUIDE_PAGE.VIEWER.CONTENT_7') %></p>
+                            </div>
+                            <div class="tab-pane fade in" id="streamers_guide">
+                                <% var SETTINGS_CATEGORY = require('../utils/Constants').SETTINGS_CATEGORY %>
+                                <% var WIDGETS_CATEGORY = require('../utils/Constants').WIDGETS_CATEGORY %>
+                                <h4><%= localizeString('GUIDE_PAGE.STREAMER.HEADER_VIDEO_GUIDES') %></h4>
+                                <div class="owl-carousel-v4 margin-bottom-20">
+                                    <div class="owl-slider-v4">
+                                        <div class="item">
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                                <iframe src="https://www.youtube.com/embed/r_H8HLxA414" frameborder="0" allowFullScreen></iframe>
+                                            </div>
+                                            <h5><%= localizeString('VIDEO_GUIDES.QUICK_START.TITLE') %></h5>
+                                        </div>
+                                        <div class="item">
+                                            <div class="embed-responsive embed-responsive-16by9">
+                                                <iframe src="https://www.youtube.com/embed/gkb-4KzWaxc" frameborder="0" allowFullScreen></iframe>
+                                            </div>
+                                            <h5><%= localizeString('VIDEO_GUIDES.DONATION_GOAL.TITLE') %></h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4><%= localizeString('GUIDE_PAGE.STREAMER.HEADER') %></h4>
+                                <p><strong><%= localizeString('GUIDE_PAGE.STREAMER.CONTENT_1') %></strong></p>
+                                <p><%= localizeString('GUIDE_PAGE.STREAMER.CONTENT_2') %></p>
+                                <p>
+                                    <%= localizeString('GUIDE_PAGE.STREAMER.CONTENT_3_1') %>
+                                    <a href="<%= '/dashboard/settings/' + SETTINGS_CATEGORY.PAYMENTS%>">
+                                        <%= localizeString('GUIDE_PAGE.STREAMER.CONTENT_3_2') %>
+                                    </a>
+                                    <%= localizeString('GUIDE_PAGE.STREAMER.CONTENT_3_3') %>
+                                </p>
+                                <img class="img-responsive img-bordered guide-image" src="/resources/images/how_to_streamer_1.png" alt="">
+                                <p>
+                                    <%= localizeString('GUIDE_PAGE.STREAMER.CONTENT_4_1') %>
+                                    <a href="<%= '/dashboard/widgets/' + WIDGETS_CATEGORY.ALERTS%>">
+                                        <%= localizeString('GUIDE_PAGE.STREAMER.CONTENT_4_2') %>
+                                    </a>
+                                    <%= localizeString('GUIDE_PAGE.STREAMER.CONTENT_4_3') %>
+                                </p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="responsive-video guide-video">
+                                            <iframe width="100%" src="https://www.youtube.com/embed/WIf6UxV_s0I" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="responsive-video guide-video">
+                                            <iframe width="100%" src="https://www.youtube.com/embed/v_i4IHTL6iM" frameborder="0" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p>
+                                    <%= localizeString('GUIDE_PAGE.STREAMER.CONTENT_5_1') %>
+                                    <a href="<%= '/dashboard/settings/' + SETTINGS_CATEGORY.DONATION_PAGE%>">
+                                        <%= localizeString('GUIDE_PAGE.STREAMER.CONTENT_5_2') %>
+                                    </a>
+                                    <%= localizeString('GUIDE_PAGE.STREAMER.CONTENT_5_3') %>
+                                </p>
+                                <p><strong><%= localizeString('GUIDE_PAGE.STREAMER.CONTENT_6') %></strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Tab v2 -->
+                </div>
+            </div>
+		</div>
+	</div>
+
+	<% var renderFooter = require('./partials/footer.js').render %>
+	<%= renderFooter() %>
+
+</div><!--/wrapper-->
+
+<% var renderGoogleAnalytics = require('../utils/GoogleAnalytics.js').render %>
+<%= renderGoogleAnalytics() %>
+
+</body>
+</html>

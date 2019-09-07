@@ -1,0 +1,50 @@
+.b-dashboard-support-service__separator
+{
+  margin: 15px;
+  @include horizontal-line($TEXT_DARK_COLOR, $LIGHTEST_COLOR)
+}
+
+.b-dashboard-support-service__options
+{
+  margin-top: 20px;
+
+  @include flex-align-items-center;
+  flex-direction: column;
+}
+
+.b-dashboard-support-service-option
+{
+    @include flex-align-items-center;
+}
+
+.b-dashboard-support-service-options
+{
+  display: inline-block;
+}
+
+.b-dashboard-support-service-options__item
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.b-dashboard-support-service-option__icon
+{
+    min-width: 30px;
+    @include flex-center-content;
+}
+
+.b-dashboard-support-service-option-icon
+{
+    padding: 10px;
+}
+
+.b-dashboard-support-service-option-description-link
+{
+  @include link-on-light;
+}
+
+.b-dashboard-support-service-option-description
+{
+  @include small-font;
+}
