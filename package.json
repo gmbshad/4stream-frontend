@@ -79,7 +79,7 @@
     "sprintf-js": "^1.0.3",
     "style-loader": "^0.13.1",
     "webfontloader": "^1.6.26",
-    "webpack": "^1.12.12",
+    "webpack": "^5.94.0",
     "whatwg-fetch": "^1.0.0"
   }
 }
